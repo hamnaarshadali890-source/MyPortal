@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeNeighbour AI V3.0 - AI Community Safety Grid</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+
+  
+
+   <!-- ==========================================
+     HEADER & NAVIGATION BAR
+     ========================================== -->
+<header id="main-header" class="main-header">
+  <div class="header-container">
+    
+    <!-- Cyber Hexagon Brand Logo -->
+    <a href="#" class="brand-logo">
+      <div class="logo-hexagon-wrapper">
+        <svg class="hex-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+          </defs>
+          <polygon class="hex-path-outer" points="50,3 93,25 93,75 50,97 7,75 7,25" />
+          <polygon class="hex-path-inner" points="50,10 85,28 85,72 50,90 15,72 15,28" />
+        </svg>
+        <div class="logo-icon-content">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+      </div>
+
+      <div class="logo-text">
+        <span class="brand-name">SafeNeighbour<span class="highlight">AI</span></span>
+        <span class="brand-sub"><span class="sub-dot"></span>GRID V3.0</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#hero-section" class="nav-link active">
+            <i class="fa-solid fa-house-chimney"></i> Overview
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#emergency-sos" class="nav-link text-danger">
+            <i class="fa-solid fa-triangle-exclamation"></i> SOS Grid
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#first-aid" class="nav-link">
+            <i class="fa-solid fa-kit-medical"></i> First Aid
+          </a>
+        </li>
+        <li class="nav-item">
+           <a href="#emergency-hotlines" class="nav-link hotline-nav-btn">
+           <i class="fa-solid fa-phone"></i> Hotlines
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#safety-quiz-kit" class="nav-link">
+            <i class="fa-solid fa-graduation-cap"></i> Quiz & Kit
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#safety-analytics" class="nav-link">
+            <i class="fa-solid fa-chart-line"></i> Analytics
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header Right Actions -->
+    <div class="header-actions">
+      <div class="network-badge">
+        <span class="live-pulse"></span>
+        <span class="badge-text">Mesh Active</span>
+      </div>
+     <button type="button" class="btn btn-sm btn-glass nav-ai-btn" onclick="openAiChat()">
+  <i class="fa-solid fa-robot icon-cyan"></i>
+  <span>Ask AI</span>
+</button>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+    <!-- ==========================================
+     SECTION 1: HERO SECTION
+     ========================================== -->
+<section id="hero-section" class="hero-section">
+  <!-- Dynamic Background Glow FX -->
+  <div class="glow-sphere sphere-primary"></div>
+  <div class="glow-sphere sphere-secondary"></div>
+
+  <div class="hero-container">
+    <!-- Hero Left: Content & CTAs -->
+    <div class="hero-content">
+      <div class="badge-pill">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>AI-Powered Defense Grid v3.0</span>
+      </div>
+
+      <h1 class="hero-title">
+        Next-Gen Community <br />
+        <span class="gradient-text">Safety & Emergency Response</span>
+      </h1>
+
+      <p class="hero-description">
+        Real-time threat detection, instant SOS routing, interactive emergency guides, and intelligent neighborhood security analytics—all in one unified platform.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#emergency-sos" class="btn btn-primary">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Trigger SOS Alert</span>
+        </a>
+        <a href="#ai-assistant" class="btn btn-glass">
+          <i class="fa-solid fa-brain"></i>
+          <span>Launch AI Assistant</span>
+        </a>
+      </div>
+
+      <!-- Live Metric Badges -->
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <span class="metric-value" id="active-nodes-counter">1,420+</span>
+          <span class="metric-label">Active Nodes</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-value">99.9%</span>
+          <span class="metric-label">Uptime Security</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-value">&lt; 2.4s</span>
+          <span class="metric-label">Avg. Response</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Right: AI Command Center & Safety Index Card -->
+    <div class="hero-visual">
+      <div class="glass-card command-center-card">
+        <!-- Card Header -->
+        <div class="card-header-flex">
+          <div class="status-indicator">
+            <span class="pulse-dot"></span>
+            <span class="status-text">Grid Active</span>
+          </div>
+          <span class="card-tag">Sector 07</span>
+        </div>
+
+        <!-- Central Score Widget -->
+        <div class="safety-index-widget">
+          <div class="index-circle-outer">
+            <svg class="progress-ring" width="140" height="140">
+              <circle class="progress-ring-bg" stroke="rgba(255,255,255,0.08)" stroke-width="8" fill="transparent" r="58" cx="70" cy="70"/>
+              <circle class="progress-ring-bar" stroke="url(#blue-gradient)" stroke-width="8" stroke-dasharray="364.4" stroke-dashoffset="43.7" stroke-linecap="round" fill="transparent" r="58" cx="70" cy="70"/>
+              <defs>
+                <linearGradient id="blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00f2fe" />
+                  <stop offset="100%" stop-color="#4facfe" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="index-content">
+              <span class="index-score">88</span>
+              <span class="index-max">/100</span>
+              <span class="index-label">Safety Score</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Live Feed Stats -->
+        <div class="command-stats-list">
+          <div class="command-stat-row">
+            <div class="stat-info">
+              <i class="fa-solid fa-radar icon-cyan"></i>
+              <span>Active Scanning</span>
+            </div>
+            <span class="stat-badge badge-success">Optimal</span>
+          </div>
+
+          <div class="command-stat-row">
+            <div class="stat-info">
+              <i class="fa-solid fa-tower-broadcast icon-blue"></i>
+              <span>Local Mesh Net</span>
+            </div>
+            <span class="stat-badge badge-info">100% Online</span>
+          </div>
+
+          <!-- Animated Progress Bar Item -->
+          <div class="command-stat-bar-group">
+            <div class="bar-header">
+              <span>Community Threat Shield</span>
+              <span class="bar-percentage">92%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 2: EMERGENCY SOS
+     ========================================== -->
+<section id="emergency-sos" class="sos-section">
+  <!-- Emergency Background FX -->
+  <div class="glow-sphere sphere-emergency"></div>
+
+  <div class="sos-container">
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-danger">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>High-Priority Protocol</span>
+      </div>
+      <h2 class="section-title">
+        Instant AI Emergency <span class="gradient-text-danger">SOS Dispatch</span>
+      </h2>
+      <p class="section-description">
+        Activating the SOS grid broadcasts your precise encrypted location, triggers automated local response nodes, and alerts registered neighborhood first-responders instantly.
+      </p>
+    </div>
+
+    <!-- Main SOS Control Grid -->
+    <div class="sos-grid">
+      
+      <!-- Left Column: Primary SOS Trigger Panel -->
+      <div class="glass-card sos-trigger-card">
+        <div class="card-status-bar">
+          <span class="status-indicator-danger">
+            <span class="pulse-dot-danger"></span>
+            <span>SOS Channel Standby</span>
+          </span>
+          <span class="signal-strength">
+            <i class="fa-solid fa-wifi icon-cyan"></i>
+            <span>5G Mesh Active</span>
+          </span>
+        </div>
+
+        <!-- Central SOS Interactive Button Ring -->
+        <div class="sos-button-wrapper">
+          <div class="ripple-ring ring-1"></div>
+          <div class="ripple-ring ring-2"></div>
+          <div class="ripple-ring ring-3"></div>
+
+          <button id="sos-trigger-btn" class="sos-main-btn" aria-label="Activate Emergency SOS">
+            <div class="btn-inner-content">
+              <i class="fa-solid fa-power-off sos-icon"></i>
+              <span class="sos-btn-text">HOLD FOR SOS</span>
+              <span class="sos-btn-sub">3 Sec Verification</span>
+            </div>
+          </button>
+        </div>
+
+        <p class="sos-instruction-text">
+          <i class="fa-solid fa-shield-cat"></i> Press and hold or click once to initiate simulated emergency response.
+        </p>
+
+        <!-- SOS Countdown & Alert Overlay (Hidden by default, activated via JS) -->
+        <div id="sos-countdown-overlay" class="sos-countdown-overlay hidden">
+          <div class="countdown-card">
+            <div class="warning-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>EMERGENCY DISPATCH INITIATED</span>
+            </div>
+            <div class="countdown-number" id="sos-timer-display">03</div>
+            <p class="countdown-subtext">Broadcasting location vector to Rescue 1122 & local patrol...</p>
+            
+            <button id="sos-cancel-btn" class="btn btn-cancel-sos">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Cancel Alert (Safe)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Real-time Dispatch Telemetry & Demo Status -->
+      <div class="sos-info-stack">
+        
+        <!-- Live Dispatch Status Card -->
+        <div class="glass-card sos-status-card">
+          <div class="info-card-header">
+            <div class="info-card-title">
+              <i class="fa-solid fa-satellite-dish icon-cyan"></i>
+              <h3>Dispatch Telemetry</h3>
+            </div>
+            <span class="badge-tag" id="sos-live-state">Grid Ready</span>
+          </div>
+
+          <div class="telemetry-rows">
+            <div class="telemetry-item">
+              <span class="telemetry-label"><i class="fa-solid fa-location-dot"></i> GPS Coordinate</span>
+              <span class="telemetry-value highlight-cyan" id="sos-gps-coord">33.6844° N, 73.0479° E</span>
+            </div>
+
+            <div class="telemetry-item">
+              <span class="telemetry-label"><i class="fa-solid fa-user-shield"></i> Nearest Node</span>
+              <span class="telemetry-value">Sector 07 Patrol Unit #4</span>
+            </div>
+
+            <div class="telemetry-item">
+              <span class="telemetry-label"><i class="fa-solid fa-clock-rotate-left"></i> Estimated Arrival</span>
+              <span class="telemetry-value highlight-green">&lt; 3.5 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Demo Alert Controls Card -->
+        <div class="glass-card sos-demo-card">
+          <div class="info-card-header">
+            <div class="info-card-title">
+              <i class="fa-solid fa-flask icon-blue"></i>
+              <h3>System Protocol Action</h3>
+            </div>
+          </div>
+          <p class="demo-card-desc">
+            Test specific automated emergency escalation workflows without broadcasting live distress beacons.
+          </p>
+
+          <div class="demo-btn-group">
+            <button class="btn btn-demo-alert" data-emergency-type="Medical">
+              <i class="fa-solid fa-truck-medical"></i>
+              <span>Medical Emergency</span>
+            </button>
+            <button class="btn btn-demo-alert" data-emergency-type="Security">
+              <i class="fa-solid fa-user-ninja"></i>
+              <span>Security Intrusion</span>
+            </button>
+            <button class="btn btn-demo-alert" data-emergency-type="Fire">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+              <span>Fire Hazard</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==========================================
+     SECTION 3: FIRST AID & MEDICAL GUIDANCE
+     ========================================== -->
+<section id="first-aid" class="firstaid-section">
+  <!-- Medical Ambient Glow -->
+  <div class="glow-sphere sphere-medical"></div>
+
+  <div class="firstaid-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-medical">
+        <i class="fa-solid fa-kit-medical"></i>
+        <span>AI Emergency Triage</span>
+      </div>
+      <h2 class="section-title">
+        Instant AI <span class="gradient-text-cyan">First Aid Guidance</span>
+      </h2>
+      <p class="section-description">
+        Access instant step-by-step emergency first-aid protocols driven by AI voice and text search. Clear guidance when every second counts.
+      </p>
+    </div>
+
+    <!-- AI Search & Triage Bar -->
+    <div class="glass-card medical-search-card">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input 
+          type="text" 
+          id="first-aid-search-input" 
+          placeholder="Describe symptom or injury (e.g., 'Bleeding', 'Choking', 'Burns', 'Fracture')..."
+          aria-label="Search First Aid Guidance"
+        >
+        <button id="fa-voice-btn" class="btn-voice-search" title="Voice Search Assistant">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="firstaid-filter-bar">
+      <button class="filter-tab active" data-filter="all">
+        <i class="fa-solid fa-border-all"></i> All Protocols
+      </button>
+      <button class="filter-tab" data-filter="critical">
+        <i class="fa-solid fa-heart-pulse"></i> Critical / Life Saving
+      </button>
+      <button class="filter-tab" data-filter="injuries">
+        <i class="fa-solid fa-bandage"></i> Wounds & Burns
+      </button>
+
+    </div>
+
+    <!-- First Aid Cards Grid -->
+    <div class="firstaid-grid" id="first-aid-cards-container">
+
+      <!-- Card 1: CPR Protocol -->
+      <div class="glass-card firstaid-card" data-category="critical">
+        <div class="fa-card-header">
+          <div class="fa-card-icon icon-bg-danger">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <span class="fa-priority-tag priority-high">Critical</span>
+        </div>
+        <h3 class="fa-card-title">Adult CPR Protocol</h3>
+        <p class="fa-card-desc">For unresponsive victims who are not breathing normally.</p>
+        
+        <ol class="fa-steps-list">
+          <li><strong>Check Scene Safety:</strong> Ensure environment is safe for responder.</li>
+          <li><strong>Call 1122:</strong> Alert emergency services immediately.</li>
+          <li><strong>Chest Compressions:</strong> Push hard and fast in center of chest (100–120 bpm).</li>
+        </ol>
+
+        <div class="fa-card-footer">
+         <button type="button" class="btn btn-sm btn-outline" onclick="openInstructionModal('cpr')">
+  View Full Steps <i class="fa-solid fa-arrow-right"></i>
+</button>
+        </div>
+      </div>
+
+      <!-- Card 2: Choking / Heimlich -->
+      <div class="glass-card firstaid-card" data-category="critical">
+        <div class="fa-card-header">
+          <div class="fa-card-icon icon-bg-warning">
+            <i class="fa-solid fa-lungs"></i>
+          </div>
+          <span class="fa-priority-tag priority-high">Critical</span>
+        </div>
+        <h3 class="fa-card-title">Choking Response</h3>
+        <p class="fa-card-desc">Action plan when airway is completely blocked.</p>
+        
+        <ol class="fa-steps-list">
+          <li><strong>5 Back Blows:</strong> Deliver firm blows between shoulder blades.</li>
+          <li><strong>5 Abdominal Thrusts:</strong> Inward/upward thrusts above navel.</li>
+          <li><strong>Repeat:</strong> Alternate until obstruction clears or victim loses consciousness.</li>
+        </ol>
+
+        <div class="fa-card-footer">
+         <button type="button" class="btn btn-fa-action" data-card="choking" onclick="openInstructionModal('choking')">
+  <span>View Full Steps</span>
+  <i class="fa-solid fa-arrow-right"></i>
+</button>
+        </div>
+      </div>
+
+      <!-- Card 3: Severe Bleeding -->
+      <div class="glass-card firstaid-card" data-category="injuries">
+        <div class="fa-card-header">
+          <div class="fa-card-icon icon-bg-cyan">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <span class="fa-priority-tag priority-medium">Urgent</span>
+        </div>
+        <h3 class="fa-card-title">Severe Bleeding</h3>
+        <p class="fa-card-desc">How to control major arterial or venous hemorrhages.</p>
+        
+        <ol class="fa-steps-list">
+          <li><strong>Direct Pressure:</strong> Apply firm, constant pressure with sterile cloth.</li>
+          <li><strong>Elevate:</strong> Keep wounded limb above heart level if no fracture.</li>
+          <li><strong>Tourniquet:</strong> Apply 2 inches above wound if severe bleeding continues.</li>
+        </ol>
+
+        <div class="fa-card-footer">
+          <button class="btn btn-fa-action" data-card="bleeding" onclick="openInstructionModal('bleeding')">
+            <span>View Full Steps</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Burns Treatment -->
+      <div class="glass-card firstaid-card" data-category="injuries">
+        <div class="fa-card-header">
+          <div class="fa-card-icon icon-bg-orange">
+            <i class="fa-solid fa-fire-burner"></i>
+          </div>
+          <span class="fa-priority-tag priority-medium">Urgent</span>
+        </div>
+        <h3 class="fa-card-title">Burns Treatment</h3>
+        <p class="fa-card-desc">First-response care for heat, chemical, or electrical burns.</p>
+        
+        <ol class="fa-steps-list">
+          <li><strong>Cool Burn:</strong> Run cool water for 10–20 mins. Never use ice or butter.</li>
+          <li><strong>Cover Cleanly:</strong> Wrap loosely with sterile cling film or non-stick gauze.</li>
+          <li><strong>Seek Care:</strong> Get immediate help for facial or deep 2nd/3rd degree burns.</li>
+        </ol>
+
+        <div class="fa-card-footer">
+          <button class="btn btn-fa-action" data-card="burns" onclick="openInstructionModal('burns')">
+            <span>View Full Steps</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Emergency Medical Call Banner -->
+    <div class="glass-card medical-hotline-banner">
+      <div class="hotline-info">
+        <i class="fa-solid fa-phone-volume hotline-icon"></i>
+        <div>
+          <h4>Need Immediate Direct Ambulance Dispatch?</h4>
+          <p>Connect with accredited emergency medical services hotline instantly.</p>
+        </div>
+      </div>
+      <a href="tel:1122" class="btn btn-call-emergency">
+        <i class="fa-solid fa-square-phone"></i>                                                                
+        <span>Call Ambulance (1122)</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- ==========================================
+     SECTION 4: SAFE ZONES & MAP GRID
+     ========================================== -->
+<section id="safe-zones" class="safezones-section">
+  <!-- Cyber Blue Ambient Glow -->
+  <div class="glow-sphere sphere-safezones"></div>
+
+  <div class="safezones-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-safezones">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Real-Time Geospatial Mesh</span>
+      </div>
+      <h2 class="section-title">
+        Neighborhood <span class="gradient-text-blue">Safe Zones & Radar Grid</span>
+      </h2>
+      <p class="section-description">
+        Locate nearest active medical units, verified neighborhood safe havens, police outposts, and emergency shelters synced in real-time.
+      </p>
+    </div>
+
+    <!-- Map Filter Toolbar -->
+    <div class="map-filter-bar">
+      <button class="map-tab active" data-node="all">
+        <i class="fa-solid fa-layer-group"></i> All Nodes
+      </button>
+      <button class="map-tab" data-node="hospital">
+        <i class="fa-solid fa-hospital"></i> Hospitals
+      </button>
+      <button class="map-tab" data-node="police">
+        <i class="fa-solid fa-building-shield"></i> Police Outposts
+      </button>
+      <button class="map-tab" data-node="shelter">
+        <i class="fa-solid fa-person-shelter"></i> Safe Shelters
+      </button>
+      <button class="map-tab" data-node="fire">
+        <i class="fa-solid fa-fire-extinguisher"></i> Fire Stations
+      </button>
+    </div>
+
+    <!-- Map Layout Grid (Interactive Map + Telemetry Panel) -->
+    <div class="map-layout-grid">
+      
+      <!-- Interactive Map Frame / Radar Container -->
+      <div class="glass-card map-frame-card">
+        
+        <!-- Radar Scan HUD Overlay -->
+        <div class="map-hud-overlay">
+          <div class="hud-status">
+            <span class="radar-ping"></span>
+            <span>Live Mesh Scanning...</span>
+          </div>
+          <button class="btn btn-recenter" id="map-recenter-btn">
+            <i class="fa-solid fa-crosshairs"></i> Recenter GPS
+          </button>
+        </div>
+
+        <!-- Simulated Interactive Map Canvas -->
+        <div class="map-canvas" id="simulated-map-canvas">
+          <!-- Grid Overlay Pattern -->
+          <div class="map-grid-pattern"></div>
+          
+          <!-- Radar Sweep Pulse Line -->
+          <div class="radar-sweep-line"></div>
+
+          <!-- Active Map Pins (Simulated Interactive Markers) -->
+          <div class="map-marker marker-user" style="top: 50%; left: 48%;" title="Your Location">
+            <div class="marker-pulse"></div>
+            <i class="fa-solid fa-circle-user"></i>
+            <span class="marker-tooltip">You are here</span>
+          </div>
+
+          <div class="map-marker marker-node" data-type="hospital" style="top: 32%; left: 65%;" title="City Hospital">
+            <i class="fa-solid fa-hospital"></i>
+            <span class="marker-tooltip">City Trauma Center (1.2 km)</span>
+          </div>
+
+          <div class="map-marker marker-node" data-type="police" style="top: 68%; left: 30%;" title="Police HQ">
+            <i class="fa-solid fa-building-shield"></i>
+            <span class="marker-tooltip">Sector 07 Police Substation (0.8 km)</span>
+          </div>
+
+          <div class="map-marker marker-node" data-type="shelter" style="top: 25%; left: 22%;" title="Community Shelter">
+            <i class="fa-solid fa-person-shelter"></i>
+            <span class="marker-tooltip">Civic Defense Shelter B-3 (1.9 km)</span>
+          </div>
+
+          <div class="map-marker marker-node" data-type="fire" style="top: 75%; left: 72%;" title="Fire Rescue Node">
+            <i class="fa-solid fa-fire-extinguisher"></i>
+            <span class="marker-tooltip">Central Fire Rescue #2 (2.4 km)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Nearby Nodes List Panel -->
+      <div class="glass-card map-sidebar-card">
+        <div class="sidebar-header">
+          <h3><i class="fa-solid fa-list-check icon-cyan"></i> Nearest Active Nodes</h3>
+          <span class="node-count-badge" id="active-node-count">4 Nodes Found</span>
+        </div>
+
+        <div class="nodes-list" id="nodes-list-container">
+          
+          <!-- Node 1 -->
+          <div class="node-item" data-type="police">
+            <div class="node-icon icon-bg-blue">
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <div class="node-details">
+              <h4 class="node-title">Sector 07 Police Substation</h4>
+              <p class="node-address"><i class="fa-solid fa-location-dot"></i> Block C, Central Ave • 0.8 km away</p>
+              <div class="node-meta">
+                <span class="meta-tag tag-open"><i class="fa-solid fa-clock"></i> Open 24/7</span>
+                <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Guarded Zone</span>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-navigate" data-lat="33.6844" data-lng="73.0479">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+            </button>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="node-item" data-type="hospital">
+            <div class="node-icon icon-bg-cyan">
+              <i class="fa-solid fa-hospital"></i>
+            </div>
+            <div class="node-details">
+              <h4 class="node-title">City Trauma & ER Hospital</h4>
+              <p class="node-address"><i class="fa-solid fa-location-dot"></i> Main Boulevard • 1.2 km away</p>
+              <div class="node-meta">
+                <span class="meta-tag tag-open"><i class="fa-solid fa-truck-medical"></i> ER Ready</span>
+                <span class="meta-tag"><i class="fa-solid fa-bed"></i> 14 Beds Free</span>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-navigate" data-lat="33.6900" data-lng="73.0550">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+            </button>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="node-item" data-type="shelter">
+            <div class="node-icon icon-bg-green">
+              <i class="fa-solid fa-person-shelter"></i>
+            </div>
+            <div class="node-details">
+              <h4 class="node-title">Civic Defense Shelter B-3</h4>
+              <p class="node-address"><i class="fa-solid fa-location-dot"></i> 4th Street Complex • 1.9 km away</p>
+              <div class="node-meta">
+                <span class="meta-tag tag-open"><i class="fa-solid fa-solar-panel"></i> Power Backup</span>
+                <span class="meta-tag"><i class="fa-solid fa-box-tissue"></i> Supplies Loaded</span>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-navigate" data-lat="33.6750" data-lng="73.0300">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 5: AI CRIME & THREAT ANALYSIS
+     ========================================== -->
+<section id="threat-analysis" class="threat-section">
+  <!-- Purple Cyber Ambient Glow -->
+  <div class="glow-sphere sphere-threat"></div>
+
+  <div class="threat-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-threat">
+        <i class="fa-solid fa-brain-circuit"></i>
+        <span>Predictive AI Analytics</span>
+      </div>
+      <h2 class="section-title">
+        Real-Time Neighborhood <span class="gradient-text-purple">Threat Intelligence</span>
+      </h2>
+      <p class="section-description">
+        AI-driven predictive analytics monitoring regional crime telemetry, historical risk patterns, and active community alerts in real time.
+      </p>
+    </div>
+
+    <!-- Top Analytical Grid: Risk Meter HUD & Live Stats -->
+    <div class="threat-top-grid">
+      
+      <!-- Card 1: Main AI Risk Index Gauge -->
+      <div class="glass-card threat-gauge-card">
+        <div class="gauge-header">
+          <h3><i class="fa-solid fa-shield-halved icon-purple"></i> Local Risk Index</h3>
+          <span class="live-status-pill">Live Patrol Feed</span>
+        </div>
+
+        <!-- Arc Gauge Representation -->
+        <div class="gauge-wrapper">
+          <svg class="gauge-svg" viewBox="0 0 200 120">
+            <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100" />
+            <path class="gauge-fill" id="gauge-fill-path" d="M 20 100 A 80 80 0 0 1 180 100" stroke-dashoffset="120" />
+          </svg>
+          <div class="gauge-center-content">
+            <span class="gauge-score" id="risk-score-val">LOW</span>
+            <span class="gauge-percentage">18% Risk Level</span>
+          </div>
+        </div>
+
+        <div class="gauge-footer-meta">
+          <div class="meta-stat">
+            <span class="stat-label">Safety Index</span>
+            <span class="stat-val text-green">82/100</span>
+          </div>
+          <div class="meta-stat">
+            <span class="stat-label">Patrol Density</span>
+            <span class="stat-val text-purple">High</span>
+          </div>
+          <div class="meta-stat">
+            <span class="stat-label">Active Alerts</span>
+            <span class="stat-val text-cyan">01 Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: AI Incident Category Radar Breakdown -->
+      <div class="glass-card threat-breakdown-card">
+        <div class="gauge-header">
+          <h3><i class="fa-solid fa-chart-pie icon-cyan"></i> 24h Risk Distribution</h3>
+          <span class="update-time-text"><i class="fa-solid fa-rotate"></i> Updated 2 mins ago</span>
+        </div>
+
+        <div class="threat-bars-stack">
+          
+          <!-- Threat Metric 1 -->
+          <div class="threat-bar-item">
+            <div class="bar-label-group">
+              <span><i class="fa-solid fa-person-burst"></i> Property Theft / Burglary</span>
+              <span class="bar-percentage">12%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-low" style="width: 12%;"></div>
+            </div>
+          </div>
+
+          <!-- Threat Metric 2 -->
+          <div class="threat-bar-item">
+            <div class="bar-label-group">
+              <span><i class="fa-solid fa-car-burst"></i> Vehicle Tampering</span>
+              <span class="bar-percentage">24%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-medium" style="width: 24%;"></div>
+            </div>
+          </div>
+
+          <!-- Threat Metric 3 -->
+          <div class="threat-bar-item">
+            <div class="bar-label-group">
+              <span><i class="fa-solid fa-user-ninja"></i> Night Intrusion Risk</span>
+              <span class="bar-percentage">8%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-low" style="width: 8%;"></div>
+            </div>
+          </div>
+
+          <!-- Threat Metric 4 -->
+          <div class="threat-bar-item">
+            <div class="bar-label-group">
+              <span><i class="fa-solid fa-bolt"></i> Infrastructure Outage</span>
+              <span class="bar-percentage">5%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill fill-low" style="width: 5%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Predictive Insights & Recent Log -->
+    <div class="glass-card threat-logs-card">
+      <div class="logs-header">
+        <div class="logs-title">
+          <i class="fa-solid fa-network-wired icon-purple"></i>
+          <h3>Automated Neighborhood AI Log</h3>
+        </div>
+        <button class="btn btn-sm btn-refresh-log" id="refresh-ai-log-btn">
+          <i class="fa-solid fa-rotate-right"></i> Refresh Feed
+        </button>
+      </div>
+
+      <div class="logs-list" id="ai-logs-container">
+        
+        <!-- Log Item 1 -->
+        <div class="log-entry log-success">
+          <div class="log-timestamp">21:42 PM</div>
+          <div class="log-badge">NORMAL</div>
+          <div class="log-message">Patrol Unit #4 verified clear status across Sector 07 Residential Block C.</div>
+        </div>
+
+        <!-- Log Item 2 -->
+        <div class="log-entry log-warning">
+          <div class="log-timestamp">20:15 PM</div>
+          <div class="log-badge">ADVISORY</div>
+          <div class="log-message">AI CCTV Node #12 flagged suspicious stationary vehicle near East Gate. Patrol notified.</div>
+        </div>
+
+        <!-- Log Item 3 -->
+        <div class="log-entry log-info">
+          <div class="log-timestamp">18:30 PM</div>
+          <div class="log-badge">SYSTEM</div>
+          <div class="log-message">Automated evening streetlamp mesh network activated successfully.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 6: EMERGENCY SOS & BROADCAST
+     ========================================== -->
+<section id="sos-broadcast" class="sos-section">
+  <!-- Red Ambient Threat Glow -->
+  <div class="glow-sphere sphere-sos"></div>
+
+  <div class="sos-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-sos">
+        <i class="fa-solid fa-bell-exclamation"></i>
+        <span>Emergency Broadcast Hub</span>
+      </div>
+      <h2 class="section-title">
+        Instant <span class="gradient-text-red">SOS Distress Activation</span>
+      </h2>
+      <p class="section-description">
+        Broadcast immediate multi-channel emergency alerts to local community watches, verified emergency contacts, and nearby active first responders.
+      </p>
+    </div>
+
+    <!-- Main SOS Control Layout -->
+    <div class="sos-main-grid">
+      
+      <!-- Left Panel: Panic Button & Trigger Radius -->
+      <div class="glass-card sos-panic-card">
+        <div class="sos-card-header">
+          <h3><i class="fa-solid fa-triangle-exclamation icon-red"></i> Distress Signal Control</h3>
+          <span class="live-status-pill pill-red">Ready for Broadcast</span>
+        </div>
+
+        <!-- Pulse Ring & Giant SOS Button -->
+        <div class="sos-button-wrapper">
+          <div class="pulse-ring ring-1"></div>
+          <div class="pulse-ring ring-2"></div>
+          <button id="sos-trigger-btn" class="sos-main-button" aria-label="Activate SOS Distress Beacon">
+            <div class="sos-btn-inner">
+              <i class="fa-solid fa-power-off"></i>
+              <span class="sos-btn-text">HOLD FOR SOS</span>
+              <span class="sos-btn-subtext">Press & Hold (3s)</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Radius & Mode Selectors -->
+        <div class="sos-controls-panel">
+          <div class="control-group">
+            <label for="broadcast-radius-select" class="control-label">
+              <i class="fa-solid fa-tower-broadcast"></i> Alert Radius
+            </label>
+            <select id="broadcast-radius-select" class="sos-select-input">
+              <option value="500m">500 Meters (Immediate Block)</option>
+              <option value="1km" selected>1.0 Kilometer (Neighborhood)</option>
+              <option value="3km">3.0 Kilometers (District Mesh)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label"><i class="fa-solid fa-volume-high"></i> Alert Mode</label>
+            <div class="sos-toggle-group">
+              <button class="sos-mode-btn active" data-mode="siren">
+                <i class="fa-solid fa-bullhorn"></i> Siren + Beacon
+              </button>
+              <button class="sos-mode-btn" data-mode="silent">
+                <i class="fa-solid fa-eye-slash"></i> Silent Dispatch
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Auto-Dispatch Dispatch Targets -->
+      <div class="glass-card sos-contacts-card">
+        <div class="sos-card-header">
+          <h3><i class="fa-solid fa-users-gear icon-cyan"></i> Emergency Dispatch Targets</h3>
+          <span class="update-time-text"><i class="fa-solid fa-shield-check text-green"></i> All Channels Online</span>
+        </div>
+
+        <div class="dispatch-channels-list">
+          
+          <!-- Channel 1: Police & Emergency First Responders -->
+          <div class="dispatch-channel-item">
+            <div class="channel-icon icon-police">
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <div class="channel-info">
+              <div class="channel-title">Local Police / Emergency 911</div>
+              <div class="channel-desc">Automated location coordinates & telemetry payload transmission.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked disabled>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <!-- Channel 2: Community Neighborhood Watch -->
+          <div class="dispatch-channel-item">
+            <div class="channel-icon icon-watch">
+              <i class="fa-solid fa-people-roof"></i>
+            </div>
+            <div class="channel-info">
+              <div class="channel-title">Community Watch Network</div>
+              <div class="channel-desc">Push notifications to 48 verified active neighborhood wardens.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-watch-network" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <!-- Channel 3: Personal Emergency Contacts -->
+          <div class="dispatch-channel-item">
+            <div class="channel-icon icon-contacts">
+              <i class="fa-solid fa-address-book"></i>
+            </div>
+            <div class="channel-info">
+              <div class="channel-title">Emergency Contacts (3 Saved)</div>
+              <div class="channel-desc">Instant SMS & automated priority voice call dispatch.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-personal-contacts" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <!-- Channel 4: Automated Audible Siren Beacon -->
+          <div class="dispatch-channel-item">
+            <div class="channel-icon icon-siren">
+              <i class="fa-solid fa-volume-xmark" id="siren-channel-icon"></i>
+            </div>
+            <div class="channel-info">
+              <div class="channel-title">Loud Device Siren & Flashlight</div>
+              <div class="channel-desc">Flashes screen strobe and plays high-decibel alarm.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-device-siren" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Quick Emergency Hotline Strip -->
+        <div class="sos-hotline-strip">
+          <span>Direct Hotline:</span>
+          <a href="tel:911" class="hotline-btn"><i class="fa-solid fa-phone"></i> Call 911</a>
+          <a href="tel:311" class="hotline-btn hotline-secondary"><i class="fa-solid fa-phone-flip"></i> Call 311</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     HOTLINES & SPEED DIAL DIRECTORY
+     ========================================== -->
+<section id="emergency-hotlines" class="hotlines-section">
+  <!-- Red/Cyan Ambient Glow Spheres -->
+  <div class="glow-sphere sphere-hotlines"></div>
+
+  <div class="hotlines-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-hotlines">
+        <i class="fa-solid fa-phone-arrow-up-right"></i>
+        <span>24/7 Priority Emergency Hub</span>
+      </div>
+      <h2 class="section-title">
+        Verified Emergency <span class="gradient-text-red">Hotlines Directory</span>
+      </h2>
+      <p class="section-description">
+        Instant speed-dial dispatch hotlines for local police, medical ambulances, fire rescue, and specialized disaster defense teams.
+      </p>
+    </div>
+
+    <!-- Quick Dial Category Tabs -->
+    <div class="hotlines-filter-bar">
+      <button class="hotline-tab active" data-category="all">
+        <i class="fa-solid fa-border-all"></i> All Hotlines
+      </button>
+      <button class="hotline-tab" data-category="critical">
+        <i class="fa-solid fa-truck-medical"></i> Medical & Rescue
+      </button>
+      <button class="hotline-tab" data-category="security">
+        <i class="fa-solid fa-shield-cat"></i> Police & Security
+      </button>
+      <button class="hotline-tab" data-category="helpline">
+        <i class="fa-solid fa-hand-holding-hand"></i> Crisis & Helplines
+      </button>
+    </div>
+
+    <!-- Emergency Speed-Dial Cards Grid -->
+    <div class="hotlines-grid" id="hotlines-grid-container">
+
+      <!-- Hotline Card 1: Emergency Police Services -->
+      <div class="glass-card hotline-card" data-category="security">
+        <div class="hotline-card-top">
+          <div class="hotline-icon-wrapper icon-bg-blue">
+            <i class="fa-solid fa-building-shield"></i>
+          </div>
+          <span class="status-indicator-badge open">
+            <span class="status-dot"></span> 24/7 Active
+          </span>
+        </div>
+        <h3 class="hotline-title">Police Emergency Services</h3>
+        <p class="hotline-subtitle">Direct dispatch for criminal threats, intruder alerts, and immediate police response.</p>
+        
+        <div class="hotline-number-box">
+          <span class="dial-code">15 / 911</span>
+          <span class="dial-label">Toll-Free Priority Dial</span>
+        </div>
+
+        <a href="tel:15" class="btn btn-dial-action dial-police">
+          <i class="fa-solid fa-phone-flip"></i>
+          <span>Instant Speed Dial</span>
+        </a>
+      </div>
+
+      <!-- Hotline Card 2: Ambulance & ER Services -->
+      <div class="glass-card hotline-card" data-category="critical">
+        <div class="hotline-card-top">
+          <div class="hotline-icon-wrapper icon-bg-red">
+            <i class="fa-solid fa-truck-medical"></i>
+          </div>
+          <span class="status-indicator-badge open">
+            <span class="status-dot"></span> 24/7 Active
+          </span>
+        </div>
+        <h3 class="hotline-title">Ambulance & ER Dispatch</h3>
+        <p class="hotline-subtitle">Rapid paramedic dispatch for critical injuries, cardiac arrest, and trauma care.</p>
+        
+        <div class="hotline-number-box">
+          <span class="dial-code">1122</span>
+          <span class="dial-label">Medical Rescue Service</span>
+        </div>
+
+        <a href="tel:1122" class="btn btn-dial-action dial-ambulance">
+          <i class="fa-solid fa-phone-flip"></i>
+          <span>Instant Speed Dial</span>
+        </a>
+      </div>
+
+      <!-- Hotline Card 3: Fire & Rescue Services -->
+      <div class="glass-card hotline-card" data-category="critical">
+        <div class="hotline-card-top">
+          <div class="hotline-icon-wrapper icon-bg-orange">
+            <i class="fa-solid fa-fire-extinguisher"></i>
+          </div>
+          <span class="status-indicator-badge open">
+            <span class="status-dot"></span> 24/7 Active
+          </span>
+        </div>
+        <h3 class="hotline-title">Fire Department & Rescue</h3>
+        <p class="hotline-subtitle">Fire containment, structural collapse rescue, and hazardous spill management.</p>
+        
+        <div class="hotline-number-box">
+          <span class="dial-code">16</span>
+          <span class="dial-label">Fire Brigade Emergency</span>
+        </div>
+
+        <a href="tel:16" class="btn btn-dial-action dial-fire">
+          <i class="fa-solid fa-phone-flip"></i>
+          <span>Instant Speed Dial</span>
+        </a>
+      </div>
+
+      <!-- Hotline Card 4: Women & Family Safety Helpline -->
+      <div class="glass-card hotline-card" data-category="helpline">
+        <div class="hotline-card-top">
+          <div class="hotline-icon-wrapper icon-bg-purple">
+            <i class="fa-solid fa-person-breastfeeding"></i>
+          </div>
+          <span class="status-indicator-badge open">
+            <span class="status-dot"></span> Confidential
+          </span>
+        </div>
+        <h3 class="hotline-title">Women Protection Helpline</h3>
+        <p class="hotline-subtitle">Legal support, harassment response, and immediate safe space assistance.</p>
+        
+        <div class="hotline-number-box">
+          <span class="dial-code">1099</span>
+          <span class="dial-label">Human Rights & Protection</span>
+        </div>
+
+        <a href="tel:1099" class="btn btn-dial-action dial-helpline">
+          <i class="fa-solid fa-phone-flip"></i>
+          <span>Instant Speed Dial</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Quick Location-Based Emergency Info Banner -->
+    <div class="glass-card hotlines-banner">
+      <div class="banner-content">
+        <i class="fa-solid fa-circle-radiation banner-icon"></i>
+        <div>
+          <h4>National Disaster & Crisis Management Unit</h4>
+          <p>For flood warnings, earthquake telemetry, and disaster relief support.</p>
+        </div>
+      </div>
+      <a href="tel:1117" class="btn btn-disaster-call">
+        <i class="fa-solid fa-phone"></i> Dial Disaster Management (1117)
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 7: COMMUNITY FORUM & FEEDS
+     ========================================== -->
+<section id="community-forum" class="forum-section">
+  <!-- Purple & Blue Ambient Mesh Glow -->
+  <div class="glow-sphere sphere-forum"></div>
+
+  <div class="forum-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-forum">
+        <i class="fa-solid fa-comments"></i>
+        <span>Verified Resident Network</span>
+      </div>
+      <h2 class="section-title">
+        Neighborhood <span class="gradient-text-cyan">Safety Forum & Feed</span>
+      </h2>
+      <p class="section-description">
+        Connect with verified neighbors, post real-time safety observations, and collaborate with community wardens in your immediate area.
+      </p>
+    </div>
+
+    <!-- Forum Controls & Post Creator Grid -->
+    <div class="forum-top-grid">
+      
+      <!-- Interactive Post Creator Glass Box -->
+      <div class="glass-card post-creator-card">
+        <div class="creator-header">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <span class="creator-title">Share a Safety Observation</span>
+        </div>
+
+        <form id="community-post-form" class="creator-form">
+          <textarea 
+            id="post-input-text" 
+            class="forum-textarea" 
+            placeholder="Report a safety event, broken lighting, or general neighborhood update..." 
+            rows="3" 
+            required
+          ></textarea>
+
+          <div class="creator-actions-bar">
+            <div class="tag-selector-group">
+              <select id="post-category-tag" class="forum-select-tag">
+                <option value="general">💬 General Notice</option>
+                <option value="suspicious">⚠️ Suspicious Activity</option>
+                <option value="verified">✅ Verified Safety Tip</option>
+                <option value="hazard">🚧 Physical Hazard</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit-post">
+              <i class="fa-solid fa-paper-plane"></i> Publish Alert
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Filter Category Sidebar Bar -->
+      <div class="glass-card forum-filter-card">
+        <h3><i class="fa-solid fa-filter icon-cyan"></i> Filter Community Feed</h3>
+        <div class="forum-tabs-vertical">
+          <button class="forum-tab active" data-filter="all">
+            <i class="fa-solid fa-layer-group"></i> All Posts
+          </button>
+          <button class="forum-tab" data-filter="suspicious">
+            <i class="fa-solid fa-triangle-exclamation"></i> Suspicious Activity
+          </button>
+          <button class="forum-tab" data-filter="verified">
+            <i class="fa-solid fa-badge-check"></i> Verified Updates
+          </button>
+          <button class="forum-tab" data-filter="general">
+            <i class="fa-solid fa-bullhorn"></i> General Discussion
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Community Posts Stream / Feed Container -->
+    <div class="forum-posts-feed" id="forum-feed-container">
+
+      <!-- Post Item 1: Suspicious Activity -->
+      <div class="glass-card forum-post-card" data-category="suspicious">
+        <div class="post-header">
+          <div class="author-meta">
+            <div class="author-avatar avatar-warning">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <h4 class="author-name">David K. <span class="badge-resident">Block 4 Resident</span></h4>
+              <span class="post-timestamp"><i class="fa-solid fa-clock"></i> 25 mins ago • Sector 07 East</span>
+            </div>
+          </div>
+          <span class="post-category-tag tag-warning">
+            <i class="fa-solid fa-triangle-exclamation"></i> Suspicious Activity
+          </span>
+        </div>
+
+        <p class="post-content-body">
+          Noticed two unfamiliar individuals taking photographs of residential driveways near Street 12 around 15 minutes ago. Patrol unit flagged and informed. Please keep garage gates locked.
+        </p>
+
+        <div class="post-footer-actions">
+          <button class="post-action-btn btn-upvote" data-votes="14">
+            <i class="fa-solid fa-thumbs-up"></i> <span class="vote-count">14</span> Helpful
+          </button>
+          <button class="post-action-btn btn-comment">
+            <i class="fa-solid fa-comment"></i> 5 Comments
+          </button>
+          <button class="post-action-btn btn-share">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+        </div>
+      </div>
+
+      <!-- Post Item 2: Verified Safety Update -->
+      <div class="glass-card forum-post-card" data-category="verified">
+        <div class="post-header">
+          <div class="author-meta">
+            <div class="author-avatar avatar-verified">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h4 class="author-name">Warden Sarah M. <span class="badge-official">Community Warden</span></h4>
+              <span class="post-timestamp"><i class="fa-solid fa-clock"></i> 2 hours ago • Main Boulevard</span>
+            </div>
+          </div>
+          <span class="post-category-tag tag-verified">
+            <i class="fa-solid fa-circle-check"></i> Verified Update
+          </span>
+        </div>
+
+        <p class="post-content-body">
+          Streetlight repair work on Central Avenue has been completed by the municipal maintenance team. All 14 LED nodes are now operational for night patrols.
+        </p>
+
+        <div class="post-footer-actions">
+          <button class="post-action-btn btn-upvote" data-votes="32">
+            <i class="fa-solid fa-thumbs-up"></i> <span class="vote-count">32</span> Helpful
+          </button>
+          <button class="post-action-btn btn-comment">
+            <i class="fa-solid fa-comment"></i> 2 Comments
+          </button>
+          <button class="post-action-btn btn-share">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+        </div>
+      </div>
+
+      <!-- Post Item 3: General Discussion -->
+      <div class="glass-card forum-post-card" data-category="general">
+        <div class="post-header">
+          <div class="author-meta">
+            <div class="author-avatar avatar-general">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div>
+              <h4 class="author-name">Elena R. <span class="badge-resident">Block 2 Resident</span></h4>
+              <span class="post-timestamp"><i class="fa-solid fa-clock"></i> 4 hours ago • West Gate</span>
+            </div>
+          </div>
+          <span class="post-category-tag tag-general">
+            <i class="fa-solid fa-comments"></i> General
+          </span>
+        </div>
+
+        <p class="post-content-body">
+          Reminder for all residents: The monthly neighborhood watch safety briefing will take place tomorrow at 6:00 PM in the Civic Center.
+        </p>
+
+        <div class="post-footer-actions">
+          <button class="post-action-btn btn-upvote" data-votes="9">
+            <i class="fa-solid fa-thumbs-up"></i> <span class="vote-count">9</span> Helpful
+          </button>
+          <button class="post-action-btn btn-comment">
+            <i class="fa-solid fa-comment"></i> 1 Comment
+          </button>
+          <button class="post-action-btn btn-share">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 8: SAFETY QUIZ & EMERGENCY KIT
+     ========================================== -->
+<section id="safety-quiz-kit" class="quiz-kit-section">
+  <!-- Ambient Glow -->
+  <div class="glow-sphere sphere-quiz"></div>
+
+  <div class="quiz-kit-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-quiz">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span>Interactive Readiness Tools</span>
+      </div>
+      <h2 class="section-title">
+        Safety <span class="gradient-text-cyan">Quiz & Emergency Kit</span>
+      </h2>
+      <p class="section-description">
+        Assess your emergency awareness and track your home preparation checklist in real-time.
+      </p>
+    </div>
+
+    <!-- Main Dual Grid Layout -->
+    <div class="quiz-kit-grid">
+
+      <!-- TOOL 1: Safety Quiz Card -->
+      <div class="glass-card quiz-card">
+        <div class="card-header-badge">
+          <i class="fa-solid fa-circle-question icon-cyan"></i>
+          <h3>Emergency Preparedness Quiz</h3>
+        </div>
+
+        <div id="quiz-box">
+          <div class="quiz-progress-bar">
+            <div id="quiz-progress" class="quiz-progress-fill" style="width: 33%;"></div>
+          </div>
+          <span id="quiz-step-count" class="step-counter">Question 1 of 3</span>
+
+          <div class="question-container">
+            <h4 id="quiz-question-text" class="question-title">
+              What is your primary action during a sudden severe earthquake?
+            </h4>
+
+            <div id="quiz-options-container" class="quiz-options">
+              <button class="quiz-option-btn" data-index="0">
+                <span class="option-letter">A</span>
+                <span class="option-text">Run outside immediately into the street</span>
+              </button>
+              <button class="quiz-option-btn" data-index="1">
+                <span class="option-letter">B</span>
+                <span class="option-text">Drop, Cover, and Hold On under sturdy furniture</span>
+              </button>
+              <button class="quiz-option-btn" data-index="2">
+                <span class="option-letter">C</span>
+                <span class="option-text">Stand right next to glass windows to observe</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+
+          <div class="quiz-footer">
+            <button id="quiz-next-btn" class="btn btn-primary btn-next-q hidden">
+              Next Question <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result Box (Hidden by default) -->
+        <div id="quiz-result-box" class="quiz-result hidden">
+          <div class="result-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3>Quiz Completed!</h3>
+          <p id="result-score-text">You scored 3 out of 3!</p>
+
+          <button id="btn-restart-quiz" class="btn btn-outline">
+            <i class="fa-solid fa-rotate-right"></i> Retake Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- TOOL 2: Emergency Kit Checklist Card -->
+      <div class="glass-card kit-card">
+        <div class="card-header-badge">
+          <i class="fa-solid fa-box-archive icon-cyan"></i>
+          <h3>Go-Bag & Emergency Kit</h3>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="kit-progress-wrapper">
+          <div class="kit-progress-info">
+            <span>Preparedness Score</span>
+            <span id="kit-percentage">0%</span>
+          </div>
+          <div class="kit-progress-bar">
+            <div id="kit-progress-fill" class="kit-progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Checklist Items -->
+        <div class="checklist-items" id="kit-checklist">
+          
+          <label class="check-item">
+            <input type="checkbox" class="kit-checkbox" data-weight="20">
+            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+            <span class="item-text">Clean Drinking Water (3-day supply per person)</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" class="kit-checkbox" data-weight="20">
+            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+            <span class="item-text">First Aid Kit & Prescription Medications</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" class="kit-checkbox" data-weight="20">
+            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+            <span class="item-text">LED Flashlight & Spare Batteries</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" class="kit-checkbox" data-weight="20">
+            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+            <span class="item-text">Power Bank & Essential Document Copies</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" class="kit-checkbox" data-weight="20">
+            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+            <span class="item-text">Non-perishable Food & Manual Can Opener</span>
+          </label>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SECTION 9: ALIGNED & CLEAN DASHBOARD
+     ========================================== -->
+<section id="safety-analytics" class="analytics-section">
+  <div class="analytics-container">
+    
+    <!-- Section Header -->
+    <div class="section-header center-align">
+      <div class="section-badge badge-analytics">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Command Center Telemetry</span>
+      </div>
+      <h2 class="section-title">
+        Community <span class="gradient-text-cyan">Safety Analytics</span>
+      </h2>
+      <p class="section-description">
+        Real-time telemetry, incident trends, and system status across all sectors.
+      </p>
+    </div>
+
+    <!-- Dashboard Toolbar -->
+    <div class="glass-card dashboard-toolbar">
+      <div class="toolbar-left">
+        <span class="live-status-pill">
+          <span class="pulse-dot"></span> LIVE TELEMETRY
+        </span>
+        <span class="last-updated"><i class="fa-solid fa-clock"></i> Updated 5s ago</span>
+      </div>
+
+      <div class="toolbar-right">
+        <div class="timeframe-selector">
+          <button class="tf-btn" data-timeframe="24h">24H</button>
+          <button class="tf-btn active" data-timeframe="7d">7D</button>
+          <button class="tf-btn" data-timeframe="30d">30D</button>
+          <button class="tf-btn" data-timeframe="1y">1Y</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top KPI Grid (Strictly Aligned) -->
+    <div class="analytics-kpi-grid">
+      
+      <div class="glass-card kpi-card">
+        <div class="kpi-left">
+          <div class="kpi-icon icon-rose"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-label">Active Incidents</span>
+            <span class="kpi-val">14</span>
+          </div>
+        </div>
+        <span class="kpi-tag tag-warning">-12%</span>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-left">
+          <div class="kpi-icon icon-cyan"><i class="fa-solid fa-stopwatch"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-label">Avg. Response</span>
+            <span class="kpi-val">3.8 min</span>
+          </div>
+        </div>
+        <span class="kpi-tag tag-success">Optimal</span>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-left">
+          <div class="kpi-icon icon-emerald"><i class="fa-solid fa-shield-check"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-label">Resolution Rate</span>
+            <span class="kpi-val">96.4%</span>
+          </div>
+        </div>
+        <span class="kpi-tag tag-success">+1.8%</span>
+      </div>
+
+      <div class="glass-card kpi-card">
+        <div class="kpi-left">
+          <div class="kpi-icon icon-purple"><i class="fa-solid fa-walkie-talkie"></i></div>
+          <div class="kpi-info">
+            <span class="kpi-label">Patrol Units</span>
+            <span class="kpi-val">28</span>
+          </div>
+        </div>
+        <span class="kpi-tag tag-info">Active</span>
+      </div>
+
+    </div>
+
+    <!-- Dashboard Main Dual Grid -->
+    <div class="dashboard-main-grid">
+
+      <!-- Left: Chart Card -->
+      <div class="glass-card chart-card">
+        <div class="chart-header">
+          <div class="chart-title">
+            <i class="fa-solid fa-chart-area icon-cyan"></i>
+            <h3 id="chart-heading">Incident Volume Trends</h3>
+          </div>
+
+          <div class="chart-metric-switch">
+            <button class="chart-tab active" data-metric="incidents">Incidents</button>
+            <button class="chart-tab" data-metric="response">Response</button>
+            <button class="chart-tab" data-metric="patrols">Patrols</button>
+          </div>
+        </div>
+
+        <div class="canvas-chart-wrapper">
+          <canvas id="analyticsMainChart" width="700" height="260"></canvas>
+        </div>
+      </div>
+
+      <!-- Right: Telemetry Side Card -->
+      <div class="glass-card side-telemetry-card">
+        
+        <!-- Category Distribution -->
+        <div class="telemetry-block">
+          <h4 class="block-title"><i class="fa-solid fa-chart-pie icon-cyan"></i> Incident Distribution</h4>
+          
+          <div class="dist-list">
+            <div class="dist-item">
+              <div class="dist-meta"><span>Infrastructure & Lighting</span><span>45%</span></div>
+              <div class="dist-progress"><div class="dist-bar bg-amber" style="width: 45%;"></div></div>
+            </div>
+
+            <div class="dist-item">
+              <div class="dist-meta"><span>Suspicious Activity</span><span>30%</span></div>
+              <div class="dist-progress"><div class="dist-bar bg-rose" style="width: 30%;"></div></div>
+            </div>
+
+            <div class="dist-item">
+              <div class="dist-meta"><span>Medical / First Aid</span><span>15%</span></div>
+              <div class="dist-progress"><div class="dist-bar bg-cyan" style="width: 15%;"></div></div>
+            </div>
+
+            <div class="dist-item">
+              <div class="dist-meta"><span>Road Hazards</span><span>10%</span></div>
+              <div class="dist-progress"><div class="dist-bar bg-emerald" style="width: 10%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid Status -->
+        <div class="telemetry-block">
+          <h4 class="block-title"><i class="fa-solid fa-server icon-cyan"></i> Grid Status</h4>
+          <div class="health-indicators">
+            <div class="health-row">
+              <span>Hotline Server</span>
+              <span class="health-badge badge-green">OPERATIONAL</span>
+            </div>
+            <div class="health-row">
+              <span>Mesh Network Latency</span>
+              <span class="health-badge badge-cyan">18ms</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ==========================================
+     SECTION 10: FOOTER & CONTACT SECTION
+     ========================================== -->
+<footer id="contact-footer" class="footer-section">
+  <!-- Ambient Mesh Background Glow -->
+  <div class="glow-sphere sphere-footer"></div>
+
+  <div class="footer-container">
+    
+    <!-- Top Contact Grid -->
+    <div class="contact-main-grid">
+      
+      <!-- Left: Contact Details & Office Info -->
+      <div class="contact-info-card glass-card">
+        <div class="section-badge badge-cyan">
+          <i class="fa-solid fa-headset"></i>
+          <span>Reach Out</span>
+        </div>
+        <h2 class="contact-title">
+          Connect with <span class="gradient-text-cyan">Safety Command</span>
+        </h2>
+        <p class="contact-desc">
+          Have questions, feedback, or need help setting up community watch in your neighborhood? Our dispatch team is available 24/7.
+        </p>
+
+        <!-- Rapid Contact Cards -->
+        <div class="contact-methods">
+          <div class="method-item">
+            <div class="method-icon icon-rose">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="method-meta">
+              <span class="method-label">Emergency Helpline</span>
+              <a href="tel:911" class="method-val">+1 (800) 555-SAFE</a>
+            </div>
+          </div>
+
+          <div class="method-item">
+            <div class="method-icon icon-cyan">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="method-meta">
+              <span class="method-label">General Inquiries</span>
+              <a href="mailto:support@safeguard.community" class="method-val">support@safeguard.community</a>
+            </div>
+          </div>
+
+          <div class="method-item">
+            <div class="method-icon icon-emerald">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="method-meta">
+              <span class="method-label">Central Command HQ</span>
+              <span class="method-val">Sector 01 North, Metropolitan Grid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Interactive Contact Form -->
+      <div class="contact-form-card glass-card">
+        <h3 class="form-title"><i class="fa-solid fa-paper-plane icon-cyan"></i> Send a Message</h3>
+        
+        <form id="contact-form" class="cyber-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" placeholder="john@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" required>
+              <option value="" disabled selected>Select Inquiry Type</option>
+              <option value="warden">Join Community Watch</option>
+              <option value="incident">Report Technical Issue</option>
+              <option value="partnership">City Partnership</option>
+              <option value="other">General Feedback</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" rows="4" placeholder="How can we assist your sector?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary submit-btn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          
+          <div id="form-response-msg" class="form-response"></div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Divider Line -->
+    <div class="footer-divider"></div>
+
+    <!-- Bottom Links & Copyright -->
+    <div class="footer-bottom-grid">
+      
+      <!-- Brand & Mission -->
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <i class="fa-solid fa-shield-halved icon-cyan"></i>
+          <span class="logo-text">Safe<span class="gradient-text-cyan">Guard</span></span>
+        </div>
+        <p class="brand-sub">
+          Next-generation community safety mesh platform powered by real-time telemetry and active neighborhood watch.
+        </p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-links-group">
+        <div class="link-column">
+          <h4>Platform</h4>
+          <a href="#features">Features</a>
+          <a href="#map">Live Safety Map</a>
+          <a href="#alerts">Emergency Response</a>
+          <a href="#safety-analytics">Analytics</a>
+        </div>
+
+        <div class="link-column">
+          <h4>Community</h4>
+          <a href="#wardens">Watch Wardens</a>
+          <a href="#guidelines">Safety Protocol</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="link-column">
+          <h4>Legal</h4>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#security">Data Protection</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-copyright">
+      <p>&copy; 2026 SafeGuard Community Platform. All rights reserved.</p>
+      
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ==========================================
+     WORKING AI CHATBOT MODAL WINDOW
+     ========================================== -->
+<div id="ai-chatbot-modal" class="chat-modal-overlay">
+  <div class="chat-modal-card">
+    
+    <!-- Header -->
+    <div class="chat-modal-header">
+      <div class="chat-bot-info">
+        <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+        <div>
+          <h4 class="chat-bot-title">NeighbourAI Assistant</h4>
+          <span class="chat-status-active"><span class="dot"></span> Online & Ready</span>
+        </div>
+      </div>
+      <button type="button" class="chat-close-btn" onclick="closeAiChat()">&times;</button>
+    </div>
+
+    <!-- Message Stream -->
+    <div id="chat-stream-box" class="chat-stream">
+      <div class="msg bot-msg">
+        Hello! 👋 Main aapka NeighbourAI Assistant hoon. Aap safety protocols, emergency guidelines, ya kisi bhi cheez ke baare mein sawal pooch sakte hain.
+      </div>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-submit-form" class="chat-form-area">
+      <input type="text" id="chat-user-msg" placeholder="Ask AI anything..." required autocomplete="off" />
+      <button type="submit" class="chat-send-icon-btn">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+
+  </div>
+</div>
+<!--footer end-->
+<!-- ==========================================
+     FIRST AID INSTRUCTION POPUP MODAL
+     ========================================== -->
+<div id="instruction-modal" class="instruction-modal-overlay" style="display: none;" onclick="closeInstructionOnOverlay(event)">
+  <div class="instruction-card">
+    
+    <div class="instruction-header">
+      <div class="header-title-wrap">
+        <i id="instruction-icon" class="fa-solid fa-kit-medical"></i>
+        <h3 id="instruction-title">First Aid Steps</h3>
+      </div>
+      <button type="button" class="modal-close-btn" onclick="closeInstructionModal()">&times;</button>
+    </div>
+
+    <div class="instruction-body">
+      <p id="instruction-desc" class="instruction-subtitle"></p>
+      
+      <div class="steps-timeline" id="instruction-steps-list">
+        <!-- Steps JS se dynamically render honge -->
+      </div>
+    </div>
+
+    <div class="instruction-footer">
+      <button type="button" class="modal-got-it-btn" onclick="closeInstructionModal()">Got It</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- HTML file ke end par </body> se pehle paste karein -->
+<script>
+  // 1. Data Store
+const firstAidStepsDatabase = {
+  cpr: {
+    title: "Adult CPR Protocol",
+    icon: "fa-solid fa-heart-pulse",
+    desc: "Perform CPR when an adult is unresponsive and not breathing normally.",
+    steps: [
+      "Ensure the surrounding area is completely safe from hazards before approaching.",
+      "Tap the shoulders firmly and shout loudly to check if the person responds.",
+      "Call emergency services immediately and ask someone nearby to bring an AED.",
+      "Tilt the head back slightly, lift chin, and check for normal breathing for 10 seconds.",
+      "Place the heel of one hand in the center of the chest and interlock your fingers.",
+      "Push hard and fast (5 to 6 cm deep) at a rate of 100 to 120 compressions per minute.",
+      "Allow the chest to rise completely back to its normal position after each compression.",
+      "Continue chest compressions without stopping until emergency medical help arrives."
+    ]
+  },
+  choking: {
+    title: "Choking Relief Protocol",
+    icon: "fa-solid fa-lungs",
+    desc: "Follow these steps for a conscious person unable to breathe, cough, or speak.",
+    steps: [
+      "Check if the victim cannot speak, breathe, or make any sound.",
+      "Ask 'Are you choking?' and let them know you are going to help them.",
+      "If the person can still cough, encourage them to cough as hard as possible.",
+      "Stand behind them and lean their upper body slightly forward.",
+      "Deliver 5 firm, sharp blows between their shoulder blades using the heel of your hand.",
+      "Wrap your arms around their waist and make a fist just above their navel.",
+      "Grasp your fist with your other hand and give 5 quick, upward abdominal thrusts.",
+      "Alternate between 5 back blows and 5 abdominal thrusts until the airway is clear."
+    ]
+  },
+  burns: {
+    title: "Burn Injury Care",
+    icon: "fa-solid fa-fire-flame-curled",
+    desc: "Immediate first aid treatment for thermal, heat, or scald burn injuries.",
+    steps: [
+      "Safely remove the heat source or get the person away from danger.",
+      "Cool the burn under cool running tap water for 10 to 20 minutes immediately.",
+      "Never use ice, ice water, or frozen items directly on burned skin.",
+      "Gently remove tight clothing, rings, and watches before the area starts swelling.",
+      "Do not apply butter, toothpaste, oil, or home remedies on the burn.",
+      "Leave all fluid-filled blisters intact to avoid serious skin infection.",
+      "Cover the area loosely with a sterile, non-stick dressing or clean plastic wrap.",
+      "Seek urgent medical attention if the burn is large or on hands, face, or joints."
+    ]
+  }
+};
+
+  // 2. Open Function
+  function openInstructionModal(type) {
+    const modal = document.getElementById('instruction-modal');
+    const title = document.getElementById('instruction-title');
+    const icon = document.getElementById('instruction-icon');
+    const desc = document.getElementById('instruction-desc');
+    const list = document.getElementById('instruction-steps-list');
+
+    const data = firstAidStepsDatabase[type] || firstAidStepsDatabase['cpr'];
+
+    if (modal) {
+      if (title) title.innerText = data.title;
+      if (icon) icon.className = data.icon;
+      if (desc) desc.innerText = data.desc;
+
+      if (list) {
+        list.innerHTML = '';
+        data.steps.forEach((step, idx) => {
+          list.innerHTML += `
+            <div class="step-item">
+              <div class="step-num">${idx + 1}</div>
+              <div class="step-text">${step}</div>
+            </div>
+          `;
+        });
+      }
+
+      modal.style.display = 'flex';
+    } else {
+      alert('Modal HTML not found! Check id="instruction-modal"');
+    }
+  }
+
+  // 3. Close Function
+  function closeInstructionModal() {
+    const modal = document.getElementById('instruction-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  // 4. Background Click Close
+  function closeInstructionOnOverlay(e) {
+    if (e.target.id === 'instruction-modal') {
+      closeInstructionModal();
+    }
+  }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

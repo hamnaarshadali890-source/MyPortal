@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/*----- HEADER & NAVBAR -----*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5%;
+    background-color: #0f172a;
+    z-index: 1000;
+}
+
+.logo {
+    display: inline-flex;
+    gap: 12px;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-content {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+li{
+    color: white;
+}
+
+li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+/*----- HERO BANNER -----*/
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg img.png') center/cover no-repeat;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.hero {
+    color: white;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-primary {
+    padding: 12px 24px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: #0f172a;
+    color: white;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+    background-color: white;
+    color: #0f172a;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+/*----- FEATURES SECTION -----*/
+.features {
+    min-height: 100vh;
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #020617, #0f172a, #172554);
+    color: white;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.features p {
+    margin-bottom: 50px;
+    color: #cbd5e1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.col {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 1px 2px 8px #020617;
+    transition: transform 0.3s ease;
+}
+
+.col:hover {
+    transform: translateY(-10px);
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title h2 {
+    margin-bottom: 15px;
+}
+
+.card-text p {
+    line-height: 1.6;
+}
+
+/*----- PRICING SECTION -----*/
+.pricing {
+    min-height: 100vh;
+    padding: 80px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #020617, #0f172a, #172554);
+}
+
+.pricing h1 {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.pricing-text {
+    margin-bottom: 40px;
+    color: #cbd5e1;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.price-card {
+    transition: transform 0.3s ease;
+    padding: 30px;
+    box-shadow: 1px 2px 8px #020617;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+}
+
+.price-card h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.price-card h3 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+    color: white;
+}
+
+.price-card p {
+    color: #cbd5e1;
+}
+
+.price-card button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #1e3a8a;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.price-card button:hover {
+    background: #2563eb;
+}
+
+/*----- FOOTER -----*/
+footer {
+    text-align: center;
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Tablet View (Max Width: 992px) */
+@media (max-width: 992px) {
+    .cards, 
+    .pricing-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile View (Max Width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-content {
+        gap: 5px;
+    }
+
+    li a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        padding-top: 130px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .features, 
+    .pricing {
+        padding: 60px 5%;
+    }
+
+    .cards, 
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .col, 
+    .price-card {
+        padding: 20px;
+    }
+}
